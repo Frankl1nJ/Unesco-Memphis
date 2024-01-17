@@ -1,0 +1,475 @@
+:root {
+    --primary: #28180A;
+    --background: #191919;
+    --slider: rgba(252, 191, 80, 0.877);
+    --navbar-height: 48px;
+}
+
+/* Body */
+
+body {
+    margin: 0;
+    background-color: #fdf2e9;
+}
+
+body #CoeurCite, #title {
+    color: white;
+}
+
+
+/* Header */
+
+header #hautHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+header #hautHeader #choixLangues, .boutonVisiter {
+    display: flex;
+    align-items: end;
+}
+
+header #hautHeader #titleHeader {
+    display: flex;
+}
+
+#hautHeader a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+
+header {
+    background-color: var(--primary);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header #menu_bar {
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -1%;
+    margin-bottom: -0.5%;
+}
+
+header #menu_bar a {
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    background-image: linear-gradient(to right,
+            var(--slider),
+            var(--slider) 50%,
+            white 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 3px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+header #menu_bar a:before {
+    content: '';
+    background: var(--slider);
+    display: block;
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    width: 0;
+    height: 4%;
+    transition: all 0.2s ease-in-out;
+}
+
+header #menu_bar a:hover {
+    background-position: 0;
+}
+
+header #menu_bar a:hover::before {
+    width: 100%;
+} 
+
+
+/* Section "Titre" / Présentation */
+
+#title {
+    margin-top: 10%;
+    background-image: url('../assets/Img_Accueil/Title.png');
+    background-size: cover;
+    display: block;
+    padding: 5%;
+    height: 300px;
+}
+
+#title p {
+    font-size: 3vw;
+}
+
+/* Section Carrousel */
+#carrousel #title-map p {
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+custom-slider { 
+    display: none;
+}
+
+.slide-container {
+    max-width: 50%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;        
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.6s ease;
+}
+
+.prev{ 
+    left: 15px; 
+}
+
+.next { 
+    right: 15px; 
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.slide-text {
+    position: absolute;
+    color: #ffffff;
+    font-weight: bold; /* Améliorer police d'écriture */
+    font-size: 25px;
+    padding: 15px;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.slide-index {
+    color: #ffffff;
+    font-size: 13px;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+}
+
+.slide-img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide-dot{ 
+    text-align: center; 
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #999999;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover { 
+    background-color: #111111; 
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+
+/* Section Map */
+
+#map div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+iframe {
+    width: 100%;
+}
+
+#map #descriptif {
+    padding: 2%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+#map #descriptif p {
+    text-align: justify;
+}
+
+/* Image de transition */
+
+#img-transition {
+    background-image: url('../assets/Img_Accueil/Transition.png');
+    background-size: cover;
+    background-position: center;
+    display: block;
+    padding: 5%;
+    height: 5%;
+}
+
+
+/* Boutons */
+
+button {
+    display: inline-block;
+    background-color: #7E603B;
+    border-radius: 20px;
+    color: white;
+    width: 150px;
+    border: 1px solid white;
+    position: relative;
+    font-weight: 2;
+    padding: 0.4rem;
+}
+
+button:hover {
+    transition: 0.2s;
+    background-color: #28180A;
+}
+
+
+/* Section Au coeur de la cité */
+
+#CoeurCite {
+    background-color: #28180a;
+    padding: 5%;
+}
+
+#CoeurCite p {
+    position: relative;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+#CoeurCite p::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 50%;
+    height: 2px;
+    opacity: 0.5;
+    right: 5%;
+}
+
+#CoeurCite #set-images {
+    background-image: url("../assets/Img_Accueil/Set_img.png");
+    background-position: center;
+    background-size: cover;
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 30px;
+}
+
+
+/* Section Infos pratiques */
+
+#infos-pratiques {
+    padding: 3%;
+}
+
+#infos-pratiques p {
+    position: relative;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+#infos-pratiques p::before {
+    position: absolute;
+    content: "";
+    background-color: var(--primary);
+    width: 50%;
+    height: 2px;
+    right: 5%;
+}
+
+#infos-pratiques #container-infos-pratiques{
+    display: flex;
+    justify-content: space-around;
+}
+
+#infos-pratiques table {
+    margin: 0;
+}
+
+#infos-pratiques table a {
+    color: black;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+#infos-pratiques table a:hover i {
+    transform: translate(1vw);
+    transition: 0.3s;
+}
+
+#infos-pratiques table a i {
+    font-size: 1vw;
+    transition: 0.3s;
+}
+
+#infos-pratiques img{
+    max-width: 0;
+    min-width: 350px;
+    display: block;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #505050;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer div {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+#Images_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Images_footer img {
+    padding: 10px;
+}
+
+footer div h4 {
+    position: relative;
+}
+
+footer div h4::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 80%;
+    height: 3px;
+    bottom: -80%;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 700px) {
+    
+    #hautHeader #titleHeader {
+        font-size: 2.8vw;
+    }
+
+    header #menu_bar {
+        flex-wrap: wrap;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    header #menu_bar p {
+        font-size: 2vw;
+    }
+    
+    #title{
+        margin-top: 20%;
+    }
+
+    #title p {
+        font-size: 4vw;
+    }
+
+    button {
+        width: 70px;
+        padding: 0.3rem;
+        font-size: 2vw;
+    }
+
+    #carrousel #title-map p {
+        font-size: 3.5vw;
+    }
+
+    #CoeurCite #set-images {
+        height: 25rem;
+    }
+
+    #CoeurCite #title-coeurcite p {
+        font-size: 3vw;
+    }
+
+    #infos-pratiques p {
+        font-size: 2.5vw;
+    }
+
+    #infos-pratiques table a {
+        font-size: 2.2vw;
+    }
+
+    #infos-pratiques table a i {
+        font-size: 2vw;
+    }
+
+    #infos-pratiques #container-infos-pratiques {
+        flex-direction: column;
+    }
+
+    #infos-pratiques #container-infos-pratiques img {
+        min-width: 250px;
+    }
+}
