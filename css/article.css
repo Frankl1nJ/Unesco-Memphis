@@ -1,0 +1,252 @@
+:root {
+    --primary: #28180A;
+    --background: #191919;
+    --slider: rgba(252, 191, 80, 0.877);
+    --navbar-height: 48px;
+}
+
+/* Body */
+
+body {
+    margin: 0;
+    padding-top: 100px;
+    background-color: #fdf2e9;
+}
+
+
+/* Header */
+
+header #hautHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+header #hautHeader #choixLangues, .boutonVisiter {
+    display: flex;
+    align-items: end;
+}
+
+header #hautHeader #titleHeader {
+    display: flex;
+}
+
+#hautHeader a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+
+header {
+    background-color: var(--primary);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header #menu_bar {
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -1%;
+    margin-bottom: -0.5%;
+}
+
+header #menu_bar a {
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    background-image: linear-gradient(to right,
+            var(--slider),
+            var(--slider) 50%,
+            white 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 3px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+header #menu_bar a:before {
+    content: '';
+    background: var(--slider);
+    display: block;
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    width: 0;
+    height: 4%;
+    transition: all 0.2s ease-in-out;
+}
+
+header #menu_bar a:hover {
+    background-position: 0;
+}
+
+header #menu_bar a:hover::before {
+    width: 100%;
+}
+
+
+/* Boutons */
+
+button {
+    display: inline-block;
+    background-color: #7E603B;
+    border-radius: 20px;
+    color: white;
+    width: 150px;
+    border: 1px solid white;
+    position: relative;
+    font-weight: 2;
+    padding: 0.4rem;
+}
+
+button:hover {
+    transition: 0.2s;
+    background-color: #28180A;
+}
+
+
+/* Section article */
+
+.bg-article {
+    background-image: url(../assets/Img_Article/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 1200px;
+}
+
+.article {
+    background-color: #fdf2e9;
+    height: 96%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 40px;
+}
+
+.header-article {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-article div {
+    margin: 20px;
+}
+
+.title {
+    font-size: 3vw;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.img-article img {
+    max-width: 400px;
+    width: 100%;
+}
+
+.content-article {
+    text-align: justify;
+    /* margin-left: 3%;
+    margin-right: 3%; */
+    margin: 3%;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #505050;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer div {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+#Images_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Images_footer img {
+    padding: 10px;
+}
+
+#logoUnesco img {
+    max-height: 80px;
+    height: 100%;
+}
+
+#IUT img{
+    max-height: 40px;
+    height: 100%;
+}
+
+footer div h4 {
+    position: relative;
+}
+
+footer div h4::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 80%;
+    height: 3px;
+    bottom: -80%;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 700px) {
+
+    body {
+        padding-top: 80px;
+    }
+    
+    #hautHeader #titleHeader {
+        font-size: 2.8vw;
+    }
+
+    header #menu_bar {
+        flex-wrap: wrap;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    header #menu_bar p {
+        font-size: 2vw;
+    }
+
+    button {
+        width: 70px;
+        padding: 0.3rem;
+        font-size: 2vw;
+    }
+}
