@@ -26,23 +26,67 @@ header #hautHeader {
     padding-left: 2%;
     padding-right: 2%;
 }
-
 header #hautHeader #choixLangues, .boutonVisiter {
     display: flex;
     align-items: end;
+}
+
+#hautHeader .choixLangues {
+    /* background-color: red; */
+    width: 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#hautHeader .choixLangues img {
+    width: 2.5vw;
+    margin: 5px;
+}
+
+#hautHeader .choixLangues a {
+    position: relative;
+}
+
+#hautHeader #FR #fr::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 80%;
+    left: 10%;
+    height: 2px;
+    bottom: 0.2vw;
+}
+
+#hautHeader #EN #en::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 80%;
+    left: 10%;
+    height: 2px;
+    bottom: 0.2vw;
+}
+
+#hautHeader #CN #cn::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 80%;
+    left: 10%;
+    height: 2px;
+    bottom: 0.2vw;
 }
 
 header #hautHeader #titleHeader {
     display: flex;
 }
 
-#hautHeader a {
+#hautHeader #titleHeader a {
     text-decoration: none;
     color: white;
     margin: 10px;
     font-size: 1.5em;
 }
-
 
 header {
     background-color: var(--primary);

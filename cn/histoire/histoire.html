@@ -10,15 +10,19 @@
     <body>
         <header>
             <section id="hautHeader">
-                <div id="choixLangues">
-                    <select name="langues" id="langue" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                        <option value="">中国人</option>
-                        <option value="../../en/histoire/histoire.html">English</option>
-                        <option value="../../fr/histoire/histoire.html">Français</option>
-                    </select>
+                <div class="choixLangues" id="CN">
+                    <a href="../../fr/histoire/histoire.html" id="fr">
+                        <img src="../../assets/Header-Footer/Fr.png" alt="Drapeau Français">
+                    </a>
+                    <a href="../../en/histoire/histoire.html" id="en">
+                        <img src="../../assets/Header-Footer/En.png" alt="Drapeau Anglais">
+                    </a>
+                    <a href="" id="cn">
+                        <img src="../../assets/Header-Footer/Cn.png" alt="Drapeau Chinois">
+                    </a>
                 </div>
                 <div id="titleHeader">
-                    <a href="../accueil/accueil.html">MEMPHIS</a>
+                    <a href="../accueil/accueil.html">孟菲斯</a>
                 </div>
                 <div class="boutonVisiter">
                     <button type="button">Visiter</button>
@@ -31,7 +35,7 @@
                         <p>Histoire</p>
                     </div>
                 </a>
-                <a href="#archi" title="Architecture">
+                <a href="../architecture/architecture.html" title="Architecture">
                     <div id="ongletArchi">
                         <p>Architecture</p>
                     </div>
@@ -229,29 +233,56 @@
                             <img src="../../assets/Img_Histoire/image_5.png" alt="song">
                         </label>
                     </div>
-                
+                    
+                    <div class="nom-container">
+                        <div class="scrolling-text">
+                            <div class="info-area-nom" id="test">
+                                <label class="nom" id="text-1">
+                                    <div class="nom">Narmer</div>
+                                </label>
+
+                                <label class="nom" id="text-2">
+                                    <div class="nom">Djoser</div>
+                                </label>
+
+                                <label class="nom" id="text-3">
+                                    <div class="nom">Ramses II</div>
+                                </label>
+
+                                <label class="nom" id="text-4">
+                                    <div class="nom">Akhénaton</div>
+                                </label>
+
+                                <label class="nom" id="text-5">
+                                    <div class="nom">Cléopâtre</div>
+                                </label>
+                                
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="footer-container">
                         <div class="scrolling-text">
                             <div class="info-area" id="test">
 
                                 <label class="text" id="text-1">
-                                    <div class="title"><h2>Narmer</h2>Narmer, également connu sous le nom de Ménès, est considéré comme le fondateur de Memphis. Vers 3100 av. J.-C., il réussit à unifier la Haute et la Basse-Égypte, établissant ainsi les fondations de l'empire égyptien. Memphis devient la première capitale de cette nouvelle nation unifiée sous son règne.</div>
+                                    <div class="title">Narmer, également connu sous le nom de Ménès, est considéré comme le fondateur de Memphis. Vers 3100 av. J.-C., il réussit à unifier la Haute et la Basse-Égypte, établissant ainsi les fondations de l'empire égyptien. Memphis devient la première capitale de cette nouvelle nation unifiée sous son règne.</div>
                                 </label>
 
                                 <label class="text" id="text-2">
-                                    <div class="title"><h2>Djoser</h2>Le pharaon Djoser est particulièrement célèbre pour avoir ordonné la construction de la Pyramide à degrés de Saqqarah, conçue par l'architecte Imhotep. Cette structure novatrice marque une étape cruciale dans l'évolution des pyramides égyptiennes et renforce le statut de Memphis comme centre architectural majeur.</div>
+                                    <div class="title">Le pharaon Djoser est particulièrement célèbre pour avoir ordonné la construction de la Pyramide à degrés de Saqqarah, conçue par l'architecte Imhotep. Cette structure novatrice marque une étape cruciale dans l'évolution des pyramides égyptiennes et renforce le statut de Memphis comme centre architectural majeur.</div>
                                 </label>
 
                                 <label class="text" id="text-3">
-                                    <div class="title"><h2>Ramses II</h2>Ramsès II, également connu sous le nom de Ramsès le Grand, règne pendant la XIXe dynastie et laisse un héritage impressionnant à Memphis. Il étend l'empire égyptien, construit des temples et des monuments, dont le célèbre temple de Ptah à Memphis, consolidant la ville en tant que centre religieux et politique.</div>
+                                    <div class="title">Ramsès II, également connu sous le nom de Ramsès le Grand, règne pendant la XIXe dynastie et laisse un héritage impressionnant à Memphis. Il étend l'empire égyptien, construit des temples et des monuments, dont le célèbre temple de Ptah à Memphis, consolidant la ville en tant que centre religieux et politique.</div>
                                 </label>
 
                                 <label class="text" id="text-4">
-                                    <div class="title"> <h2>Akhénaton</h2>Akhénaton, souvent associé à la révolution religieuse de l'Égypte ancienne, déplace brièvement la capitale à Amarna. Bien que sa période de règne soit courte, ses actions ont des répercussions significatives sur Memphis en perturbant les traditions religieuses établies.</div>
+                                    <div class="title">Akhénaton, souvent associé à la révolution religieuse de l'Égypte ancienne, déplace brièvement la capitale à Amarna. Bien que sa période de règne soit courte, ses actions ont des répercussions significatives sur Memphis en perturbant les traditions religieuses établies.</div>
                                 </label>
 
                                 <label class="text" id="text-5">
-                                    <div class="title"><h2>Cléopâtre</h2>Cléopâtre, la dernière reine de l'Égypte ptolémaïque, a également joué un rôle dans l'histoire de Memphis. Elle était connue pour son intelligence politique et sa liaison avec les dirigeants romains, notamment Jules César et Marc Antoine. Bien que son règne marque la fin de l'indépendance de l'Égypte, il a une influence notable sur l'histoire de Memphis et de l'Égypte antique.</div>
+                                    <div class="title">Cléopâtre, la dernière reine de l'Égypte ptolémaïque, a également joué un rôle dans l'histoire de Memphis. Elle était connue pour son intelligence politique et sa liaison avec les dirigeants romains, notamment Jules César et Marc Antoine. Bien que son règne marque la fin de l'indépendance de l'Égypte, il a une influence notable sur l'histoire de Memphis et de l'Égypte antique.</div>
                                 </label>
                                 
                             </div>
@@ -261,10 +292,85 @@
             </div>
             
         </section>
+        
+        <section id="img-transition">
+        </section>
+
+
+
+        <section class="fouilles">
+            <div class="titre"><p>LES FOUILLES ET <br> DÉCOUVERTES</p></div>
+            
+            <div class="cadre">
+                <div class="texte">
+                    <p>
+                        Memphis, l'antique cité égyptienne, se dresse comme un joyau dans le temps, révélant son histoire à travers des décennies de recherches archéologiques. Les fouilles effectuées sur le site de Memphis ont apporté à la lumière des découvertes qui transcendent les époques, jetant un éclairage précieux sur la grandeur passée de cette cité emblématique.                    </p>
+                    <p id="moreText">
+                        L'histoire de Memphis, étroitement liée à l'Égypte antique, s'étend sur des millénaires, offrant une fenêtre unique sur les développements culturels, politiques et religieux de cette civilisation légendaire. Les principales recherches menées sur le site ont révélé un éventail impressionnant de trésors, réaffirmant l'importance de Memphis dans l'histoire mondiale. 
+                        <br><br> Les archéologues ont mis au jour les vestiges imposants du temple de Ptah, dédié au dieu créateur Ptah, attestant de l'importance religieuse de Memphis. Des inscriptions, statues et stèles découvertes dans cette région offrent un aperçu des croyances et pratiques religieuses de l'Égypte ancienne. 
+                        <br><br> Une des découvertes les plus emblématiques est le Sphinx d'Albâtre, représentant le pharaon Amenhotep II. Ce colossal sphinx en albâtre, actuellement exposé au musée égyptien du Caire, témoigne de la grandeur artistique et architecturale de Memphis à l'époque du Nouvel Empire. 
+                        <br><br>Les nécropoles de Memphis ont également livré des trésors archéologiques, avec des milliers de sépultures, mastabas et tombes royales. Ces découvertes ont jeté une lumière précieuse sur les pratiques funéraires et la vie après la mort dans l'Égypte antique. 
+                        <br><br> Au-delà de l'Antiquité, les archives diplomatiques découvertes sur différents sites révèlent les échanges entre Memphis et d'autres civilisations. Les lettres d'Amarna, les archives de Boğazkale et d'autres documents témoignent des relations internationales dynamiques de la cité, reflétant son statut politique et commercial. 
+                        <br><br> La mention fréquente et détaillée de Memphis dans les écrits de voyageurs tels qu'Hérodote et Diodore de Sicile atteste de la fascination continue pour cette cité à travers les âges. Leurs récits, remontant au Ve siècle avant notre ère, contribuent à la préservation de la mémoire de Memphis au-delà de son déclin politique. 
+                        <br><br> En conclusion, les recherches sur le site de Memphis ont ouvert une fenêtre sur l'Égypte antique, dévoilant des trésors qui transcendent le temps. Des temples majestueux aux témoignages diplomatiques, en passant par les mystères des nécropoles, chaque découverte façonne un récit captivant de la grandeur passée de Memphis, rappelant son rôle central dans l'histoire ancienne. Ces recherches continuent de nous livrer des clés pour comprendre et apprécier l'héritage exceptionnel de cette cité légendaire.                    </p>
+                    <div id="lirePlusBtnContainer">
+                        <button id="lirePlusBtn" onclick="afficherTexteComplet()">Lire plus</button>
+                    </div>
+        </section>
+
+        <section class="A_lire">
+            <div class="titre2">
+                <p>A LIRE AUSSI</p>
+            </div>
+            <div id="title-map">
+                <div class="slide-container">
+                    <div class="custom-slider fade">
+                        <div class="slide-index">1 / 3</div>
+                        <a href=#>
+                            <img class="slide-img" src="../../assets/Img_Histoire/article1.jpg">
+                        </a>
+                        <div class="slide-text">
+                            <div>Archéologie</div>
+                            <p>Découverte d'une momie de 4300 ans enveloppée d’or</p>
+                        </div>
+                    </div>
+                    <div class="custom-slider fade">
+                        <div class="slide-index">2 / 3</div>
+                        <a href="#">
+                            <img class="slide-img" src="../../assets/Img_Histoire/article2.jpg">
+                        </a>
+                        <div class="slide-text">
+                            <div>Recherche</div>
+                            <p>Des scientifiques "déballent" numériquement la momie d'Amenhotep Ier pour la première fois en 3000 ans</p>
+                        </div>
+                    </div>
+                    <div class="custom-slider fade">
+                        <div class="slide-index">3 / 3</div>
+                        <a href="#">
+                            <img class="slide-img" src="../../assets/Img_Histoire/article3.png">
+                        </a>
+                        <div class="slide-text">
+                            <div>Découverte</div>
+                            <p>Trois momies avec une langue en or découvertes en Egypte</p>
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <div class="slide-dot">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+            </div>
+        </section>      
+        
+        
+        
 
         <footer>
             <div id="Images_footer">
-                <a href="https://www.unesco.org/zh" target="_blank" id="logoUnesco">
+                <a href="https://whc.unesco.org/zh/list/86/" target="_blank" id="logoUnesco">
                     <img src="../../logo/png-transparent-unesco-hd-logo-thumbnail.png" alt="Logo Unesco">
                 </a>
                 <a href="https://iut.univ-gustave-eiffel.fr/" target="_blank" id="IUT">
@@ -309,6 +415,56 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
+
+            function afficherTexteComplet() {
+            var moreText = document.getElementById("moreText");
+            var btn = document.getElementById("lirePlusBtn");
+
+            if (moreText.style.display === "none") {
+                moreText.style.display = "inline";
+                btn.innerHTML = "Lire moins";
+            } else {
+                moreText.style.display = "none";
+                btn.innerHTML = "Lire plus";
+            }
+        }
+        var slideIndex = 1;
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("custom-slider");
+        var dots = document.getElementsByClassName("dot");
+        var texts = document.querySelectorAll('.slide-text .text-item');
+
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        for (i = 0; i < texts.length; i++) {
+            texts[i].classList.remove("active");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        texts[slideIndex - 1].classList.add("active");
+    }
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    showSlides(slideIndex);
         </script>
     </body>
 </html>

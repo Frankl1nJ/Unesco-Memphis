@@ -3,7 +3,7 @@
 <html lang="français">
     <head>
         <meta charset="utf-8">
-        <title> Page français </title>
+        <title> Page Chinoise </title>
         <link rel="stylesheet" href="../../css/accueil.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script type="text/javascript" src="../../js/accueil.js" defer></script>
@@ -11,15 +11,19 @@
     <body>
         <header>
             <section id="hautHeader">
-                <div id="choixLangues">
-                    <select name="langues" id="langue" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                        <option value="">中国人</option>
-                        <option value="../../en/accueil/accueil.html">English</option>
-                        <option value="../../fr/accueil/accueil.html">Français</option>
-                    </select>
+                <div class="choixLangues" id="CN">
+                    <a href="../../fr/accueil/accueil.html" id="fr">
+                        <img src="../../assets/Header-Footer/Fr.png" alt="Drapeau Français">
+                    </a>
+                    <a href="../../en/accueil/accueil.html" id="en">
+                        <img src="../../assets/Header-Footer/En.png" alt="Drapeau Anglais">
+                    </a>
+                    <a href="" id="cn">
+                        <img src="../../assets/Header-Footer/Cn.png" alt="Drapeau Chinois">
+                    </a>
                 </div>
                 <div id="titleHeader">
-                    <a href="">MEMPHIS</a>
+                    <a href="">孟菲斯</a>
                 </div>
                 <div class="boutonVisiter">
                     <button type="button">Visiter</button>
@@ -32,7 +36,7 @@
                         <p>Histoire</p>
                     </div>
                 </a>
-                <a href="#archi" title="Architecture">
+                <a href="../architecture/architecture.html" title="Architecture">
                     <div id="ongletArchi">
                         <p>Architecture</p>
                     </div>
@@ -154,7 +158,7 @@
 
         <footer>
             <div id="Images_footer">
-                <a href="https://www.unesco.org/zh" target="_blank" id="logoUnesco">
+                <a href="https://whc.unesco.org/zh/list/86/" target="_blank" id="logoUnesco">
                     <img src="../../logo/png-transparent-unesco-hd-logo-thumbnail.png" alt="Logo Unesco">
                 </a>
                 <a href="https://iut.univ-gustave-eiffel.fr/" target="_blank" id="IUT">

@@ -11,15 +11,19 @@
     <body>
         <header>
             <section id="hautHeader">
-                <div id="choixLangues">
-                    <select name="langues" id="langue" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                        <option value="">中国人</option>
-                        <option value="../en/article_gastro.html">English</option>
-                        <option value="../fr/article_gastro.html">Français</option>
-                    </select>
+                <div class="choixLangues" id="CN">
+                    <a href="../fr/article_gastro.html" id="fr">
+                        <img src="../assets/Header-Footer/Fr.png" alt="Drapeau Français">
+                    </a>
+                    <a href="../en/article_gastro.html" id="en">
+                        <img src="../assets/Header-Footer/En.png" alt="Drapeau Anglais">
+                    </a>
+                    <a href="" id="cn">
+                        <img src="../assets/Header-Footer/Cn.png" alt="Drapeau Chinois">
+                    </a>
                 </div>
                 <div id="titleHeader">
-                    <a href="./accueil/accueil.html">MEMPHIS</a>
+                    <a href="./accueil/accueil.html">孟菲斯</a>
                 </div>
                 <div class="boutonVisiter">
                     <button type="button">Visiter</button>
@@ -32,7 +36,7 @@
                         <p>Histoire</p>
                     </div>
                 </a>
-                <a href="#archi" title="Architecture">
+                <a href="./architecture/architecture.html" title="Architecture">
                     <div id="ongletArchi">
                         <p>Architecture</p>
                     </div>
@@ -79,7 +83,7 @@
 
         <footer>
             <div id="Images_footer">
-                <a href="https://www.unesco.org/zh" target="_blank" id="logoUnesco">
+                <a href="https://whc.unesco.org/zh/list/86/" target="_blank" id="logoUnesco">
                     <img src="../logo/png-transparent-unesco-hd-logo-thumbnail.png" alt="Logo Unesco">
                 </a>
                 <a href="https://iut.univ-gustave-eiffel.fr/" target="_blank" id="IUT">

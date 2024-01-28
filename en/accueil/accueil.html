@@ -11,12 +11,16 @@
     <body>
         <header>
             <section id="hautHeader">
-                <div id="choixLangues">
-                    <select name="langues" id="langue" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                        <option value="">English</option>
-                        <option value="../../fr/accueil/accueil.html">Français</option>
-                        <option value="../../cn/accueil/accueil.html">中国人</option>
-                    </select>
+                <div class="choixLangues" id="EN">
+                    <a href="../../fr/accueil/accueil.html" id="fr">
+                        <img src="../../assets/Header-Footer/Fr.png" alt="Drapeau Français">
+                    </a>
+                    <a href="" id="en">
+                        <img src="../../assets/Header-Footer/En.png" alt="Drapeau Anglais">
+                    </a>
+                    <a href="../../cn/accueil/accueil.html" id="cn">
+                        <img src="../../assets/Header-Footer/Cn.png" alt="Drapeau Chinois">
+                    </a>
                 </div>
                 <div id="titleHeader">
                     <a href="">MEMPHIS</a>
@@ -32,7 +36,7 @@
                         <p>History</p>
                     </div>
                 </a>
-                <a href="#archi" title="Architecture">
+                <a href="../architecture/architecture.html" title="Architecture">
                     <div id="ongletArchi">
                         <p>Architecture</p>
                     </div>
@@ -153,7 +157,7 @@
 
         <footer>
             <div id="Images_footer">
-                <a href="https://www.unesco.org/en" target="_blank" id="logoUnesco">
+                <a href="https://whc.unesco.org/en/list/86/" target="_blank" id="logoUnesco">
                     <img src="../../logo/png-transparent-unesco-hd-logo-thumbnail.png" alt="Logo Unesco" height="80px">
                 </a>
                 <a href="https://iut.univ-gustave-eiffel.fr/" target="_blank" id="IUT">
