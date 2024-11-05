@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italiana&family=Krona+One&display=swap');
+
+:root {
+    --primary: #28180A;
+    --background: #191919;
+    --slider: rgba(252, 191, 80, 0.877);
+    --navbar-height: 80px;
+}
+
+body {
+    background-image: url("../assets/Img_Infos/background.png");
+    background-color: #28180A;
+    margin-top: var(--navbar-height);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+}
+
+main {
+    background-color: #fdf2e9;
+    border-radius: 50px;
+    padding-top: 30px;
+    margin: 20px 10%;
+}
+
+h2 {
+    font-size: calc(0.8rem + 0.8vw);
+    margin-bottom: 25px;
+    font-family: "Krona One", sans-serif;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 20px;
+}
+
+hr {
+    margin: 10px 5%;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--primary);
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.8rem + 0.8vw);
+    margin: 30px;
+    overflow: hidden; 
+}
+
+.slide {
+    width: 60%;
+    max-width: 60%;
+    height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.slide img {
+    width: 100%;
+    min-width: 250px;
+    height: auto; 
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card:hover {
+    background-color: #88674b;
+    color: white;
+    transition: 0.2s;
+}
+
+.card:hover .text:not(i.fa-solid) {
+    text-decoration: underline;
+}
+
+.card a i {
+    margin: 0 10px;
+}
+
+.lieux, .parcours, .handicape {
+    flex-direction: row-reverse;
+}
+
+#up-arrow {
+    display: none;
+}
+
+.text {
+    display: block;
+}
+
+/* Responsive */
+
+
+@media only screen and (max-width: 900px) {
+    .card {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #up-arrow {
+        display: block;
+    }
+
+    #arrow-horizontal {
+        display: none;
+    }
+
+    .text {
+        display: flex;
+        margin-right: 10px;
+    }
+
+    i {
+        margin-top: 2px;
+        padding-right: 5px;
+    }
+    .card:hover .text:not(i) {
+        text-decoration: underline;
+    }
+}

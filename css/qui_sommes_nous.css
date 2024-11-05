@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italiana&family=Krona+One&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/Img_Qui_sommes_nous/Background.jpg'); /* Chemin de l'image de fond */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+main {
+    margin: 50px 10%;
+}
+
+/* Style pour les sections */
+section {
+    margin-bottom: 50px;
+    position: relative;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+}
+
+section h1 {
+    font-family: 'Krona One', sans-serif;
+    font-size: 2.5em;
+    color: var(--primary);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+section h1::before {
+    content: "";
+    background-color: var(--primary);
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+section p, section ul {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Style pour les profils */
+.profil-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.profil {
+    width: 200px;
+    margin: 20px;
+    color: white;
+}
+
+.profil img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.profil p {
+    margin-top: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Styles pour les icônes */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: var(--primary);
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: gray; /* Couleur survol des icônes */
+}
+
+.traductrice {
+    font-size: 1em;
+}
+
+#projet {
+    margin-top: 110px;
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#equipe, #jury {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        margin: 20px 5%;
+    }
+
+    section h1 {
+        font-size: 2em;
+    }
+
+    section p, section ul {
+        font-size: 1em;
+    }
+
+    .profil {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .profil-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

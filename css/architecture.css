@@ -1,150 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italiana&family=Krona+One&display=swap');
+
 :root {
     --primary: #28180A;
     --background: #191919;
     --slider: rgba(252, 191, 80, 0.877);
-    --navbar-height: 48px;
+    --navbar-height: 80px;
 }
 
 /* Body */
 
 body {
-    margin: 0;
-    padding-top: 100px;
+    margin-top: var(--navbar-height);
     background-color: #fdf2e9;
 }
-
-
-/* Header */
-
-header #hautHeader {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 2%;
-    padding-right: 2%;
-}
-
-header #hautHeader #choixLangues, .boutonVisiter {
-    display: flex;
-    align-items: end;
-}
-
-#hautHeader .choixLangues {
-    /* background-color: red; */
-    width: 10vw;
-    display: flex;
-    justify-content: space-between;
-}
-
-#hautHeader .choixLangues img {
-    width: 2.5vw;
-    margin: 5px;
-}
-
-#hautHeader .choixLangues a {
-    position: relative;
-}
-
-#hautHeader #FR #fr::before {
-    position: absolute;
-    content: "";
-    background-color: white;
-    width: 80%;
-    left: 10%;
-    height: 2px;
-    bottom: 0.2vw;
-}
-
-#hautHeader #EN #en::before {
-    position: absolute;
-    content: "";
-    background-color: white;
-    width: 80%;
-    left: 10%;
-    height: 2px;
-    bottom: 0.2vw;
-}
-
-#hautHeader #CN #cn::before {
-    position: absolute;
-    content: "";
-    background-color: white;
-    width: 80%;
-    left: 10%;
-    height: 2px;
-    bottom: 0.2vw;
-}
-
-header #hautHeader #titleHeader {
-    display: flex;
-}
-
-#hautHeader #titleHeader a {
-    text-decoration: none;
-    color: white;
-    margin: 10px;
-    font-size: 1.5em;
-}
-
-
-header {
-    background-color: var(--primary);
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-header #menu_bar {
-    padding-left: 15%;
-    padding-right: 15%;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: -1%;
-    margin-bottom: -0.5%;
-}
-
-header #menu_bar a {
-    color: white;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1em;
-    background-image: linear-gradient(to right,
-            var(--slider),
-            var(--slider) 50%,
-            white 50%);
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    padding: 3px 0;
-    position: relative;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.2s ease-in-out;
-}
-
-header #menu_bar a:before {
-    content: '';
-    background: var(--slider);
-    display: block;
-    position: absolute;
-    bottom: 25%;
-    left: 0;
-    width: 0;
-    height: 4%;
-    transition: all 0.2s ease-in-out;
-}
-
-header #menu_bar a:hover {
-    background-position: 0;
-}
-
-header #menu_bar a:hover::before {
-    width: 100%;
-}
-
 
 /* Boutons */
 
@@ -157,7 +25,7 @@ button {
     border: 1px solid white;
     position: relative;
     font-weight: 2;
-    padding: 0.4rem;
+    font-family: "Krona One", sans-serif;
 }
 
 button:hover {
@@ -165,249 +33,138 @@ button:hover {
     background-color: #28180A;
 }
 
-
 /* Section Monuments */
 
-.monuments {
-    background-color: var(--primary);
+.section_monument {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #28180A;
+}
+
+.section_monument .container .line {
+    background-color: #ffffff; 
+}
+
+.titre1 {
     color: #fdf2e9;
     padding: 5%;
 }
 
-.monuments p {
+.titre1 p {
+    margin-left: 5%;
     position: relative;
-    font-size: 3vw;
-    font-weight: bold;
+    font-family: "Krona One", sans-serif;
+    font-size: calc(1rem + 1.2vw);
 }
 
-.monuments p::before {
-    position: absolute;
-    content: "";
-    background-color: #fdf2e9;
-    width: 50%;
-    height: 2px;
-    opacity: 0.5;
-    right: 5%;
-}
-
-.carrousel {
+.container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    transition: background .4s ease-in;
-
-    height: 800px;
-    /* background-color: #fdf2e9; */
-}
-  
-input[type=radio] {
-    display: none;
-}
-  
-.card {
-    position: absolute;
-    max-width: 39%;
-    width: 100%;
-    max-height: 500px;
-    height: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transition: transform .4s ease;
-    cursor: pointer;
+    margin-bottom: 5%;
+    width: 90%;
 }
 
-.card:hover {
-    opacity: 0.7;
-    transition: 0.3s;
+.container .line {
+    flex-grow: 1;
+    height: 1px; 
+    margin-left: 10px; 
 }
-  
-.container {
-    width: 100%;
-    max-width: 800px;
-    height: 100%;
-    transform-style: preserve-3d;
+
+.row_monument {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.monument {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+    max-width: 400px;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.monument:nth-child(even) {
+    flex-direction: column-reverse;
+}
+
+.monument img {
+    max-width: 390px;
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.monument:hover img {
+    filter: brightness(25%); 
+    transform: scale(0.99);
+}
+
+.monument:nth-child(even) img {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.monument-content {
+    position: relative;
+    padding: 10px;
+    background-color: #ffffff;
+    width: 100%;
+    max-height: 450px;
+    height: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
-}
-  
-.cards {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-  
-.monuments img {
-    width: 100%;
-    height: 100%;
-    border: solid;
-    border-width: 10px;
-    border-color: #181009;
-    border-radius: 10px;
-    object-fit: cover;
-    border-color: #181009;
-}
-  
-#item-1:checked ~ .cards #song-4,
-#item-2:checked ~ .cards #song-5,
-#item-3:checked ~ .cards #song-1,
-#item-4:checked ~ .cards #song-2,
-#item-5:checked ~ .cards #song-3 {
-    transform: translatex(-120%) scale(.6);
-    z-index: -1;
-}
-  
-#item-1:checked ~ .cards #song-5,
-#item-2:checked ~ .cards #song-1,
-#item-3:checked ~ .cards #song-2,
-#item-4:checked ~ .cards #song-3,
-#item-5:checked ~ .cards #song-4 {
-    transform: translatex(-60%) scale(.8);
-    z-index: 0;
-}
-  
-#item-1:checked ~ .cards #song-1,
-#item-2:checked ~ .cards #song-2,
-#item-3:checked ~ .cards #song-3,
-#item-4:checked ~ .cards #song-4,
-#item-5:checked ~ .cards #song-5 {
-    transform: translatex(0) scale(1);
-    z-index: 1;
-    
-    img {
-      box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
-    }
-}
-  
-#item-1:checked ~ .cards #song-2,
-#item-2:checked ~ .cards #song-3,
-#item-3:checked ~ .cards #song-4,
-#item-4:checked ~ .cards #song-5,
-#item-5:checked ~ .cards #song-1 {
-    transform: translatex(60%) scale(.8);
-    z-index: 0;
-}
-  
-#item-1:checked ~ .cards #song-3,
-#item-2:checked ~ .cards #song-4,
-#item-3:checked ~ .cards #song-5,
-#item-4:checked ~ .cards #song-1,
-#item-5:checked ~ .cards #song-2 {
-    transform: translatex(120%) scale(.6);
-    z-index: -1;
-}
-
-.nom-container {
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 8px;
-    width: 80%;
-    height: 100px;
-    padding: 16px 10px;
-    margin-left: 30%;
-    margin-top: 10%;
-}
-
-.info-area-nom {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 30px;
-    transition: transform .4s ease-in;
-}
-
-.info-area-nom label {
-    padding-bottom: 30px;
-}
-
-.nom{
-    font-weight: bold;
-    font-size: 37px;
-    color:#fdf2e9;
-}
-
-.footer-container {
-    border: solid;
-    border-width: 5px;
-    border-color: #7E603B;
-    background-color: #fff;
-    border-radius: 8px;
-    width: 100%;
-    height: 400px;
-    padding: 16px 10px;
-}
-  
-.scrolling-text {
-    border-radius: 15px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100%;
     overflow: hidden;
 }
-  
-.text {
-    font-weight: bold;
-    font-size: 23px;
-    width: calc(100% - 52px);
-    display: block;
-    color: black;
+
+.monument-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #7E603B;
+    font-family: "Krona One", sans-serif;
 }
-  
-.info-area {
-    width: 100%;
+
+.monument-description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: justify;
+    font-family: "Inknut Antiqua", sans-serif;
+}
+
+.monument-content::before {
+    content: attr(data-text);
     position: absolute;
-    top: 0;
-    left: 30px;
-    transition: transform .4s ease-in;
-}
-  
-.info-area label {
-    padding-bottom: 100px;
-}
-
-
-  
-#item-1:checked ~ .footer-container #test {
-    transform: translateY(0);
-}
-  
-#item-2:checked ~ .footer-container #test  {
-    transform: translateY(-250px); /* Changer les valeurs une fois les textes finis */
-}
-  
-#item-3:checked ~ .footer-container #test  {
-    transform: translateY(-500px); /* Changer les valeurs une fois les textes finis */
-}
-  
-#item-4:checked ~ .footer-container #test  {
-    transform: translateY(-750px); /* Changer les valeurs une fois les textes finis */
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    color: #ffffff;
+    padding: 10px;
+    text-align: justify;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+    font-family: "Krona One", sans-serif;
+    font-size: 1em;
 }
 
-#item-5:checked ~ .footer-container #test  {
-    transform: translateY(-990px); /* Changer les valeurs une fois les textes finis */
-}
-
-#item-1:checked ~ .nom-container .info-area-nom {
-    transform: translateY(0);
-}
-
-#item-2:checked ~ .nom-container .info-area-nom {
-    transform: translateY(-42px);
-}
-
-#item-3:checked ~ .nom-container .info-area-nom {
-    transform: translateY(-85px);
-}
-
-#item-4:checked ~ .nom-container .info-area-nom {
-    transform: translateY(-127px);
-}
-
-#item-5:checked ~ .nom-container .info-area-nom {
-    transform: translateY(-175px);
+.monument:hover .monument-content::before {
+    opacity: 1;
 }
 
 /* Image de transition */
@@ -419,31 +176,26 @@ input[type=radio] {
     display: block;
     padding: 10%;
 }
+
 /* Urbanisme et patrimoine */
 
-.urbanism{
+.urbanism {
     background-color: #fdf2e9;
 }
-.titre {
+
+.urbanism .container {
     color: #28180A;
     padding: 5%;
 }
 
-.titre p {
-    margin-left: 5%;
-    position: relative;
-    font-size: 3vw;
-    font-weight: bold;
+.urbanism .container p {
+    font-family: "Krona One", sans-serif;
+    font-size: calc(1rem + 1.2vw);
 }
 
-.titre p::before {
-    position: absolute;
-    content: "";
+.urbanism .container .line {
     background-color: #28180A;
-    width: 50%;
-    height: 2px;
-    opacity: 0.5;
-    right: 5%;
+    margin-left: 20px;
 }
 
 .cadre {
@@ -461,26 +213,34 @@ input[type=radio] {
 
 .texte {
     overflow: hidden;
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.6rem + 0.8vw);
 }
 
-.texte p{
-    font-size: 25px;
+.texte p {
+    font-size: 1.5vw;
 }
+
 #moreText {
-    
     display: none;
+    font-size: 1.5vw;
+}
+
+#moreText2 {
+    display: none;
+    font-size: 1.5vw;
 }
 
 #lirePlusBtnContainer {
     text-align: center; 
 }
 
-#lirePlusBtn {
-    border: solid;
-    border-color: #fdf2e9;
+.lirePlusBtn {
+    border: 1px solid #fdf2e9;
     background-color: #7E603B;
     color: white;
     padding: 10px 20px;
+    margin-top: 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -489,46 +249,41 @@ input[type=radio] {
     cursor: pointer;
 }
 
-#lirePlusBtn:hover {
+.lirePlusBtn:hover {
     background-color: #181009;
 }
 
 /* A lire aussi */
 
-.A_lire{
+.A_lire {
     background-color: #181009;
 }
+
 .titre2 {
     color: #fdf2e9;
     padding: 5%;
 }
 
-.titre2 p {
-    margin-left: 5%;
-    position: relative;
-    font-size: 3vw;
-    font-weight: bold;
+.A_lire .container .line {
+    background-color: #ffffff;
 }
 
-.titre2 p::before {
-    position: absolute;
-    content: "";
-    background-color: #fdf2e9;
-    width: 50%;
-    height: 2px;
-    opacity: 0.5;
-    right: 5%;
+.titre2 p {
+    font-family: "Krona One", sans-serif;
+    font-size: calc(1rem + 1.2vw);
 }
 
 /* Section Carrousel */
+
 #carrousel #title-map p {
     font-size: 3vw;
     font-weight: bold;
     text-align: center;
 }
 
-custom-slider { 
-    display: none;
+custom-slider {
+    display: flex;
+    flex-direction: row;
 }
 
 .slide-container {
@@ -541,7 +296,7 @@ custom-slider {
 
 .prev, .next {
     cursor: pointer;
-    position: absolute;        
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 60px;
@@ -552,20 +307,20 @@ custom-slider {
     border-radius: 50%;
     color: white;
     font-size: 30px;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.6s ease;
 }
 
-.prev{ 
-    left: 15px; 
+.prev {
+    left: 15px;
 }
 
-.next { 
-    right: 15px; 
+.next {
+    right: 15px;
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .slide-text {
@@ -574,20 +329,29 @@ custom-slider {
     font-weight: bold;
     font-size: 25px;
     padding: 15px;
-    bottom: 10; 
+    bottom: 10;
     width: 50%;
     text-align: center;
-    background: rgba(0, 0, 0, 0.7); /* Ajouter un fond semi-transparent */
     margin-bottom: 10%;
     margin-left: 110%;
     margin-top: -50%;
+    border-radius: 10px;
+    border: solid;
+    border-width: 5px;
+    border-color: #7E603B;
+    background: #28180A;
 }
 
-.slide-text p{
-    font-size: 20px;
-    font-weight: normal;
+.slide-text h2 {
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: calc(0.6rem + 0.8vw);
+    line-height: 30px;
 }
 
+.slide-text p {
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.4rem + 0.6vw);
+}
 
 .slide-index {
     color: #ffffff;
@@ -604,8 +368,8 @@ custom-slider {
     object-position: center;
 }
 
-.slide-dot{ 
-    text-align: center; 
+.slide-dot {
+    text-align: center;
 }
 
 .dot {
@@ -619,8 +383,8 @@ custom-slider {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover { 
-    background-color: #fdf2e9; 
+.slide-dot .active, .dot:hover {
+    background-color: #fdf2e9;
 }
 
 .fade {
@@ -629,89 +393,59 @@ custom-slider {
 }
 
 @keyframes fade {
-    from {opacity: 0} 
-    to {opacity: 1}
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
 }
-/* Footer */
-
-footer {
-    background-color: #505050;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
-}
-
-footer div {
-    flex: 1;
-    margin: 10px;
-    min-width: 200px;
-}
-
-#Images_footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#Images_footer img {
-    padding: 10px;
-}
-
-#logoUnesco img {
-    max-height: 80px;
-    height: 100%;
-}
-
-#IUT img{
-    max-height: 40px;
-    height: 100%;
-}
-
-footer div h4 {
-    position: relative;
-}
-
-footer div h4::before {
-    position: absolute;
-    content: "";
-    background-color: white;
-    width: 80%;
-    height: 3px;
-    bottom: -80%;
-}
-
 
 /* Responsive */
 
 @media only screen and (max-width: 700px) {
-    body {
-        padding-top: 80px;
+
+
+    .titre1 p,
+    .urbanism .container p,
+    .titre2 p,
+    #carrousel #title-map p {
+        font-size: 5vw;
     }
 
 
-    #hautHeader #titleHeader {
-        font-size: 2.8vw;
+    .monument-title {
+        font-size: 3vw;
+    }
+    .monument-content::before{
+        top: 10%;
+        font-size: 1.5vw;
     }
 
-    header #menu_bar {
-        flex-wrap: wrap;
-        margin-right: 5px;
-        margin-left: 5px;
+    .monument-description {
+        font-size: 2.5vw;
     }
 
-    header #menu_bar p {
-        font-size: 2vw;
+    .texte p,
+    #moreText,
+    #moreText2 {
+        font-size: 3vw;
     }
 
-    button {
-        width: 70px;
-        padding: 0.3rem;
-        font-size: 2vw;
+    .cadre {
+        width: 90%;
+        padding: 10px;
+        font-size: 1vw;
+    }
+
+    .slide-text {
+        margin-top:-60% ;
+        font-size: 3vw;
+        width: 75%;
+        margin-left: 100%;
+    }
+
+    .slide-text p {
+        font-size: 3vw;
     }
 }

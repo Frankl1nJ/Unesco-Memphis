@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italiana&family=Krona+One&display=swap');
+
+:root {
+    --primary: #28180A;
+    --background: #191919;
+    --slider: rgba(252, 191, 80, 0.877);
+    --navbar-height: 80px;
+}
+
+/* Body */
+
+body {
+    margin-top: var(--navbar-height);
+    background-color: #fdf2e9;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 80px;
+}
+
+.map h2 {
+    font-size: calc(0.8rem + 0.8vw);
+    margin-bottom: 25px;
+    font-family: "Krona One", sans-serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+iframe.google-map {
+    width: 100%;
+    height: 500px;
+}
+
+@media (max-width: 700px) {
+    .map {
+        padding: 50px 0px;
+    }
+}

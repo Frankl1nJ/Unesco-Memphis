@@ -1,0 +1,89 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-image: url('../assets/Img_Qui_sommes_nous/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+#contact {
+    background-color: #ffffff; /* Fond blanc */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Ajoute un espacement entre les éléments du formulaire */
+}
+
+form h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+form label {
+    font-size: 1.2em;
+    color: #333;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #fff;
+    color: #333;
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+    width: 100%;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    background: #7E603B;
+    color: white;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #5b472d;
+}
+
+form p {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.success {
+    color: green;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}

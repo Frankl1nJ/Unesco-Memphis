@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italiana&family=Krona+One&display=swap');
+
+:root {
+    --primary: #28180A;
+    --background: #191919;
+    --slider: rgba(252, 191, 80, 0.877);
+    --navbar-height: 80px;
+}
+
+/* Body */
+
+body {
+    margin-top: var(--navbar-height);
+    background-color: #fdf2e9;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Boutons */
+
+button {
+    display: inline-block;
+    background-color: #7E603B;
+    border-radius: 20px;
+    color: white;
+    width: 150px;
+    border: 1px solid white;
+    position: relative;
+    font-weight: 2;
+    padding: 0.4rem;
+}
+
+button:hover {
+    transition: 0.2s;
+    background-color: #28180A;
+}
+
+
+/* ------------------------------------------------SECTION ACTIVITES------------------------------------------------*/
+
+main {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#img-intro {
+    background-image: url('../assets/Img_Activites/intro.jpg');
+    background-size: cover;
+    background-position: center;
+    display: block;
+    padding: 15%;
+    color: white;
+    font-family: "Krona One", sans-serif;
+    font-size: calc(1.5rem + 1.5vw);
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#activites {
+    margin: 40px 10%;
+}
+
+#activites h1 {
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+    font-family: "Inknut Antiqua", sans-serif;
+    margin-bottom: 20px;
+}
+
+#activites h2 {
+    font-size: calc(0.8rem + 1vw);
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    width: 100%;
+    margin-bottom: 60px;
+    overflow-x: auto;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    scroll-snap-type: x mandatory;
+}
+
+/* ----------------------------------------------------CARROUSEL N°1--------------------------------------------------------*/
+.sites-historiques {
+    height: 300px;
+}
+
+.loisirs-divertissements {
+    height: 330px;
+}
+
+.gastronomie {
+    height: 350px;
+}
+
+.artisanat-shopping {
+    height: 300px;
+}
+
+.carousel-slide {
+    flex: 0 0 20%;
+    height: 180px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    background-color: #7E603B;
+    margin: 5px 10px;
+    text-decoration: none;
+    scroll-snap-align: start;
+}
+
+.carousel-slide p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: calc(0.6rem + 0.8vw);
+    font-family: "Inter", sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    padding-top: 20px;
+    transition: transform 0.3s ease;
+    transform: translateY(100%); 
+}
+
+.carousel-slide img {
+    width: 100%;
+    min-width: 140px;
+    height: 100%;
+    min-height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.carousel-slide:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(-5px); 
+}
+
+
+/* Image de transition */
+
+#img-transition {
+    background-image: url('../assets/Img_Activites/transition.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: block;
+    padding: 5%;
+    height: 10%;
+}
+
+/* ----------------------------------------------------CARROUSEL N°2--------------------------------------------------------*/
+#parcours{
+    background-color: #28180A;
+    color: #fdf2e9;
+}
+
+#activites2 {
+    margin: 40px 10%;
+    margin-bottom: 0;
+}
+
+#activites2 h1 {
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+    font-family: "Inknut Antiqua", sans-serif;
+    margin-bottom: 20px;
+    color: #fdf2e9;
+}
+
+#activites2 h2 {
+    font-size: calc(0.8rem + 1vw);
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+}
+
+.parcours {
+    height: 680px;
+}
+
+.carousel-slide2 {
+    flex: 0 0 20%;
+    height: 600px;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    margin: 5px 10px;
+    text-decoration: none;
+    scroll-snap-align: start;
+}
+
+.carousel-slide2 p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: calc(0.6rem + 0.8vw);
+    font-family: "Inter", sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    transition: transform 0.3s ease; 
+    transform: translateY(100%); 
+}
+
+.carousel-slide2 img {
+    width: 100%;
+    min-width: 140px;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.carousel-slide2:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(5px); 
+}
+
+
+/* ----------------------------------------------------CARROUSEL N°3--------------------------------------------------------*/
+.carousel-container3 {
+    width: 100%;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-slide3 {
+    margin: 10px 0;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide3:hover {
+    transform: translateX(5px); 
+}
+
+.carousel-slide3 {
+    max-height: 200px;
+    max-width: 98%;
+    flex: 1 0 25%;
+    aspect-ratio: 0.5;
+    background-color: rgb(111, 84, 192);
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.carousel-slide3 img {
+    filter: brightness(50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.carousel-slide3 p {
+    position: absolute; 
+    top: 75px; 
+    left: 180px;
+    transform: translate(-50%, -50%); 
+    font-size: calc(0.8rem + 0.8vw);
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
+.carousel-container::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background: white;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background: #7E603B;
+    border-radius: 10px;
+}
+
+/* -----------------------------------------------------------------------------------------------------------------*/
+
+/* Responsive */
+
+@media only screen and (max-width: 900px) {
+
+    button {
+        width: 70px;
+        padding: 0.3rem;
+        font-size: 2vw;
+    }
+
+    #img-intro p {
+        font-size: calc(0.8rem + 1vw);
+    }
+    
+    #activites {
+        margin: 20px 5%;
+    }
+    
+    #activites h1 {
+        font-size: calc(0.8rem + 0.8vw);
+    }
+
+    #activites h2 {
+        font-size: calc(0.6rem + 0.8vw);
+    }
+
+    .parcours {
+        height: 480px;
+    }
+
+    .carousel-slide2 {
+        height: 300px;
+    }
+
+    .carousel-slide3 p {
+        top: 40px; 
+        left: 80px;
+    }
+}

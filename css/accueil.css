@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italiana&family=Krona+One&display=swap');
+
 :root {
     --primary: #28180A;
     --background: #191919;
     --slider: rgba(252, 191, 80, 0.877);
-    --navbar-height: 48px;
+    --navbar-height: 80px;
 }
 
 /* Body */
 
 body {
-    margin: 0;
-    padding-top: 100px;
+    margin-top: var(--navbar-height);
     background-color: #fdf2e9;
 }
 
@@ -17,135 +18,26 @@ body #CoeurCite, #title {
     color: white;
 }
 
+/* Boutons */
 
-/* Header */
-
-header #hautHeader {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 2%;
-    padding-right: 2%;
-}
-header #hautHeader #choixLangues, .boutonVisiter {
-    display: flex;
-    align-items: end;
-}
-
-#hautHeader .choixLangues {
-    /* background-color: red; */
-    width: 10vw;
-    display: flex;
-    justify-content: space-between;
-}
-
-#hautHeader .choixLangues img {
-    width: 2.5vw;
-    margin: 5px;
-}
-
-#hautHeader .choixLangues a {
-    position: relative;
-}
-
-#hautHeader #FR #fr::before {
-    position: absolute;
-    content: "";
-    background-color: white;
-    width: 80%;
-    left: 10%;
-    height: 2px;
-    bottom: 0.2vw;
-}
-
-#hautHeader #EN #en::before {
-    position: absolute;
-    content: "";
-    background-color: white;
-    width: 80%;
-    left: 10%;
-    height: 2px;
-    bottom: 0.2vw;
-}
-
-#hautHeader #CN #cn::before {
-    position: absolute;
-    content: "";
-    background-color: white;
-    width: 80%;
-    left: 10%;
-    height: 2px;
-    bottom: 0.2vw;
-}
-
-header #hautHeader #titleHeader {
-    display: flex;
-}
-
-#hautHeader #titleHeader a {
-    text-decoration: none;
-    color: white;
-    margin: 10px;
-    font-size: 1.5em;
-}
-
-header {
-    background-color: var(--primary);
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-header #menu_bar {
-    padding-left: 15%;
-    padding-right: 15%;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: -1%;
-    margin-bottom: -0.5%;
-}
-
-header #menu_bar a {
-    color: white;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1em;
-    background-image: linear-gradient(to right,
-            var(--slider),
-            var(--slider) 50%,
-            white 50%);
-    background-size: 200% 100%;
-    background-position: -100%;
+button {
     display: inline-block;
-    padding: 3px 0;
+    background-color: #7E603B;
+    border-radius: 20px;
+    color: white;
+    width: 200px;
+    border: 2px solid white;
     position: relative;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.2s ease-in-out;
+    font-weight: 2;
+    padding: 0.6rem;
+    cursor: pointer;
+    font-family: "Krona One", sans-serif;
 }
 
-header #menu_bar a:before {
-    content: '';
-    background: var(--slider);
-    display: block;
-    position: absolute;
-    bottom: 25%;
-    left: 0;
-    width: 0;
-    height: 4%;
-    transition: all 0.2s ease-in-out;
+button:hover {
+    transition: 0.3s;
+    background-color: #28180A;
 }
-
-header #menu_bar a:hover {
-    background-position: 0;
-}
-
-header #menu_bar a:hover::before {
-    width: 100%;
-} 
 
 
 /* Section "Titre" / Présentation */
@@ -154,85 +46,113 @@ header #menu_bar a:hover::before {
     background-image: url('../assets/Img_Accueil/Title.png');
     background-size: cover;
     display: block;
-    padding: 5%;
-    height: 300px;
+    padding: 10%;
+    height: 50%;
+}
+
+#title button {
+    margin-top: 20px;
 }
 
 #title p {
-    font-size: 3vw;
+    font-size: 2.5vw;
+    font-family: "Krona One", sans-serif;
 }
 
 /* Section Carrousel */
-#carrousel #title-map p {
-    font-size: 3vw;
-    font-weight: bold;
-    text-align: center;
+#carrousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-custom-slider { 
+#carrousel #title-map p {
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 2.5vw;
+    font-weight: 400;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.custom-slider { 
     display: none;
 }
 
 .slide-container {
-    max-width: 50%;
-    height: 100%;
+    width: 70%;
+    height: 400px;
     position: relative;
     margin: auto;
+    background: linear-gradient(to right, #b18958, #7e603b);
+    border-radius: 20px;
+}
+
+.slide-container img {
+    border-radius: 20px;
+    width: 50%;
+    border: 2px solid white;
+}
+
+.custom-slider {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 0;
+    margin: 40px;
+    right: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .prev, .next {
     cursor: pointer;
-    position: absolute;        
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     color: white;
-    font-size: 30px;
+    font-size: calc(0.6rem + 0.8vw);
+    font-weight: bold;
     background-color: rgba(0,0,0,0);
     transition: background-color 0.6s ease;
 }
 
-.prev{ 
-    left: 15px; 
-}
-
-.next { 
-    right: 15px; 
-}
-
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.5);
+    background-color: var(--primary);
 }
 
 .slide-text {
     position: absolute;
     color: #ffffff;
-    font-weight: bold; /* Améliorer police d'écriture */
-    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.6rem + 0.8vw);
     padding: 15px;
-    bottom: 15px;
-    width: 100%;
+    margin-left: 15px;
+    width: 40%;
     text-align: center;
+    top: 80px;
 }
 
-.slide-index {
-    color: #ffffff;
-    font-size: 13px;
-    padding: 15px;
-    position: absolute;
-    top: 0;
+.slide-text h2 {
+    margin-bottom: 40px;
 }
 
 .slide-img {
     width: 100%;
-    max-height: 450px;
+    max-height: 280px;
     object-fit: cover;
     object-position: center;
+    margin: 20px;
+    position: absolute;
+    right: 20px;
 }
 
 .slide-dot{ 
@@ -244,13 +164,13 @@ custom-slider {
     height: 10px;
     width: 10px;
     margin: 0 2px;
-    background-color: #999999;
+    background-color: #fdf2e9;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover { 
+.slide-dot .active, .dot:hover { 
     background-color: #111111; 
 }
 
@@ -267,6 +187,10 @@ custom-slider {
 
 /* Section Map */
 
+#map {
+    margin: 50px 0;
+}
+
 #map div {
     display: flex;
     flex-direction: column;
@@ -274,14 +198,29 @@ custom-slider {
     margin-left: 10%;
 }
 
+#map #google-map #title-google-map h3 {
+    margin-bottom: 20px;
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: calc(0.6rem + 0.8vw);
+}
+
 iframe {
     width: 100%;
+    margin-bottom: 40px;
 }
 
 #map #descriptif {
-    padding: 2%;
-    margin-right: 15%;
-    margin-left: 15%;
+    padding: 10px;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: calc(0.6rem + 0.8vw);
+}
+
+#map #descriptif h3 {
+    font-family: "Inknut Antiqua", sans-serif;
+    margin-bottom: 15px;
 }
 
 #map #descriptif p {
@@ -300,26 +239,6 @@ iframe {
 }
 
 
-/* Boutons */
-
-button {
-    display: inline-block;
-    background-color: #7E603B;
-    border-radius: 20px;
-    color: white;
-    width: 150px;
-    border: 1px solid white;
-    position: relative;
-    font-weight: 2;
-    padding: 0.4rem;
-}
-
-button:hover {
-    transition: 0.2s;
-    background-color: #28180A;
-}
-
-
 /* Section Au coeur de la cité */
 
 #CoeurCite {
@@ -329,18 +248,21 @@ button:hover {
 
 #CoeurCite p {
     position: relative;
-    font-size: 2.5vw;
-    font-weight: bold;
+    font-family: "Krona One", sans-serif;
+    font-size: calc(1rem + 1.2vw);
 }
 
-#CoeurCite p::before {
-    position: absolute;
-    content: "";
-    background-color: white;
-    width: 50%;
-    height: 2px;
-    opacity: 0.5;
-    right: 5%;
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.container .line {
+    flex-grow: 1;
+    height: 1px; 
+    background-color: #ffffff; 
+    margin-left: 20px; 
 }
 
 #CoeurCite #set-images {
@@ -363,17 +285,12 @@ button:hover {
 
 #infos-pratiques p {
     position: relative;
-    font-size: 1.5vw;
-    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.8rem + 1vw);
 }
 
-#infos-pratiques p::before {
-    position: absolute;
-    content: "";
-    background-color: var(--primary);
-    width: 50%;
-    height: 2px;
-    right: 5%;
+#infos-pratiques .line {
+    background-color: black; 
 }
 
 #infos-pratiques #container-infos-pratiques{
@@ -382,13 +299,14 @@ button:hover {
 }
 
 #infos-pratiques table {
-    margin: 0;
+    margin-top: 20px;
 }
 
 #infos-pratiques table a {
     color: black;
-    font-size: 1.2vw;
-    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.6rem + 0.6vw);
+    font-weight: bold; 
 }
 
 #infos-pratiques table a:hover i {
@@ -408,89 +326,15 @@ button:hover {
 }
 
 
-/* Footer */
-
-footer {
-    background-color: #505050;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
-}
-
-footer div {
-    flex: 1;
-    margin: 10px;
-    min-width: 200px;
-}
-
-#Images_footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#Images_footer img {
-    padding: 10px;
-}
-
-#logoUnesco img {
-    max-height: 80px;
-    height: 100%;
-}
-
-#IUT img{
-    max-height: 40px;
-    height: 100%;
-}
-
-footer div h4 {
-    position: relative;
-}
-
-footer div h4::before {
-    position: absolute;
-    content: "";
-    background-color: white;
-    width: 80%;
-    height: 3px;
-    bottom: -80%;
-}
-
-
 /* Responsive */
 
 @media only screen and (max-width: 700px) {
-
-    body {
-        padding-top: 80px;
-    }
-    
-    #hautHeader #titleHeader {
-        font-size: 2.8vw;
-    }
-
-    header #menu_bar {
-        flex-wrap: wrap;
-        margin-right: 5px;
-        margin-left: 5px;
-    }
-
-    header #menu_bar p {
-        font-size: 2vw;
-    }
 
     #title p {
         font-size: 4vw;
     }
 
     button {
-        width: 70px;
         padding: 0.3rem;
         font-size: 2vw;
     }
@@ -499,31 +343,89 @@ footer div h4::before {
         font-size: 3.5vw;
     }
 
+     .custom-slider {
+        display: flex;
+        flex-direction: column;   
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .slide-text{
+        top: 20px;
+        width: 90%;
+        position: relative;
+    }
+
+    .slide-img{
+        left: 20%;
+        position: relative;
+    }
+
+    .navigation{
+        right: 10%;
+        width: 90%;
+        position: relative;
+    }
+
+    .slide-container{
+        
+        height: 100%;
+    }
+    
+    
     #CoeurCite #set-images {
         height: 25rem;
     }
 
     #CoeurCite #title-coeurcite p {
-        font-size: 3vw;
-    }
-
-    #infos-pratiques p {
         font-size: 2.5vw;
     }
 
+    #infos-pratiques p {
+        font-size: 3.5vw;
+    }
+
     #infos-pratiques table a {
-        font-size: 2.2vw;
+        font-size: 4vw;
+        color: #ffffff;
     }
 
     #infos-pratiques table a i {
-        font-size: 2vw;
+        font-size: 4vw;
     }
 
     #infos-pratiques #container-infos-pratiques {
+        position: relative; /* Ajoutez cette ligne pour que le pseudo-élément soit positionné par rapport au conteneur */
         flex-direction: column;
+        background-image: url('../assets/Img_Accueil/Infos_pratiques.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 10%;
+        border-radius: 2%;
+        z-index: 1; /* Pour que le contenu du conteneur soit au-dessus du pseudo-élément */
     }
-
+    
+    #infos-pratiques #container-infos-pratiques::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit; /* Utilise la même image de fond */
+        filter: brightness(50%);
+        z-index: -1; /* Positionne le pseudo-élément derrière le contenu du conteneur */
+        border-radius: 2%; /* Applique le même rayon de bordure */
+    }
+    
     #infos-pratiques #container-infos-pratiques img {
         min-width: 250px;
     }
+    
+    #infos-pratiques img {
+        display: none;
+    }
+
+    
 }
